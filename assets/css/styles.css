@@ -101,3 +101,14 @@ body {
 
 
 
+/* Responsive: stack hero buttons on small screens */
+@media (max-width: 575.98px) {
+  .hero .d-flex {
+    flex-direction: column;
+    align-items: stretch;
+    gap: .75rem;
+  }
+  .hero .btn {
+    width: 100%;
+  }
+}
