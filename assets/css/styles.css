@@ -1,0 +1,103 @@
+/* Custom styles for the portfolio */
+
+body { 
+  scroll-behavior: smooth; 
+}
+
+.hero-avatar img { 
+  object-position: center top; 
+}
+
+/* Active nav state tweak */
+.navbar .nav-link.active { 
+  color: #0d6efd; 
+  font-weight: 600; 
+}
+
+/* Card hover */
+.card:hover { 
+  transform: translateY(-2px); 
+  transition: transform .15s ease-in-out; 
+}
+
+/* Uniform project card images */
+.project-card .card-img-top {
+  height: 220px;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Cropped hero image helper */
+.hero-crop {
+  width: 100%;
+  height: 540px;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* --- UI Enhancements & Theming --- */
+:root { --accent: #6f42c1; --accent-rgb: 111,66,193; }
+body { color: #212529; background-color: #ffffff; }
+.text-secondary { color: #6c757d !important; }
+/* Subtle app background */
+body {
+  background: radial-gradient(1200px 600px at 10% -10%, rgba(13,110,253,.06), transparent 60%),
+              radial-gradient(900px 500px at 100% 10%, rgba(var(--accent-rgb),.08), transparent 60%);
+}
+
+/* Navbar blur + soft shadow */
+.navbar {
+  backdrop-filter: saturate(120%) blur(6px);
+  -webkit-backdrop-filter: saturate(120%) blur(6px);
+  box-shadow: 0 2px 12px rgba(0,0,0,.06);
+}
+
+/* Gradient hero */
+.hero { position: relative; background: linear-gradient(135deg, rgba(13,110,253,.08), rgba(var(--accent-rgb),.12)); }
+.hero::before { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(255,255,255,0), rgba(255,255,255,0)); pointer-events: none; }
+.hero .display-5 { color: var(--fg); font-weight: 800; letter-spacing: .2px; }
+.hero .lead { color: var(--fg); opacity: .92; }
+.text-shadow-sm { text-shadow: 0 1px 2px rgba(0,0,0,.18); }
+
+/* Elevated cards and smoother transitions */
+.card { 
+  border: 1px solid var(--card-border);
+  box-shadow: 0 4px 14px var(--shadow);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px var(--shadow-strong);
+}
+
+/* Badge polish */
+.badge { 
+  border-radius: 999px; 
+  padding: .5rem .65rem; 
+}
+
+/* Button refinements */
+.btn { 
+  border-radius: .6rem; 
+  box-shadow: 0 2px 6px rgba(var(--accent-rgb),.12); 
+}
+.btn-primary { background-color: var(--accent); border-color: var(--accent); }
+.btn-primary:hover { background-color: #5a33a4; border-color: #5a33a4; }
+.btn-outline-secondary { 
+  color: #495057; 
+  border-color: #ced4da; 
+}
+.btn-outline-secondary:hover { 
+  background: #f1f3f5; 
+}
+
+/* Dark theme overrides for Bootstrap surfaces */
+/* dark mode removed */
+
+/* Improve card text contrast */
+.card .card-title { color: var(--fg); font-weight: 600; }
+.card .card-text { color: var(--muted); }
+
+
+
+
